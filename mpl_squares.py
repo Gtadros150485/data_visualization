@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+from random_walks import RandomWalk
 
 def draw(xs,ys):
     fig, ax = plt.subplots()
@@ -17,7 +17,12 @@ ys = [1, 4, 9, 16, 25]
 xs = [1,2,3,4,5]
 
 plt.show()
-draw(xs, ys)
+#draw(xs, ys)
+random_walk = RandomWalk()
+random_walk.fill_walk()
+fig,ax = plt.subplots()
+ax.scatter(random_walk.x_values, random_walk.y_values, s=15)
+plt.show()
 
 
 
